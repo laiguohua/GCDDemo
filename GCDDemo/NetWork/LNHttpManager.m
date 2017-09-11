@@ -18,7 +18,7 @@
 
 @implementation LNHttpManager
 
-+ (LNHttpManager *)shareManage{
++ (LNHttpManager *)shareManager{
     static LNHttpManager *manager = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{

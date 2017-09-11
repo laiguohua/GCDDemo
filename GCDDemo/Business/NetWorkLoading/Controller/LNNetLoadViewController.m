@@ -64,7 +64,7 @@
 #pragma mark - method
 - (void)startNetWork{
     //网络请求，不需要关心显示加载，传不同的枚举即可，如果需要自己控制，则传HUD_notShow
-    [[LNHttpManager shareManage] get:@"v2/book/1220562" parameter:nil hudType:HUD_showAndCompleHidden progress:nil success:^(NSInteger code, id response, NSString *message) {
+    [[LNHttpManager shareManager] get:@"v2/book/1220562" parameter:nil hudType:HUD_showAndCompleHidden progress:nil success:^(NSInteger code, id response, NSString *message) {
         
     } failure:^(NSInteger code, id response, NSString *message) {
         

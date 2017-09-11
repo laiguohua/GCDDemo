@@ -25,7 +25,7 @@
         
         dispatch_group_enter(group);
         
-        [[LNHttpManager shareManage] get:@"v2/book/1220562" parameter:nil progress:nil success:^(NSInteger code, id response, NSString *message) {
+        [[LNHttpManager shareManager] get:@"v2/book/1220562" parameter:nil progress:nil success:^(NSInteger code, id response, NSString *message) {
             dispatch_group_leave(group);
         } failure:^(NSInteger code, id response, NSString *message) {
             dispatch_group_leave(group);
@@ -37,7 +37,7 @@
         
         dispatch_group_enter(group);
         
-        [[LNHttpManager shareManage] get:@"v2/book/1220561" parameter:nil progress:nil success:^(NSInteger code, id response, NSString *message) {
+        [[LNHttpManager shareManager] get:@"v2/book/1220561" parameter:nil progress:nil success:^(NSInteger code, id response, NSString *message) {
             dispatch_group_leave(group);
         } failure:^(NSInteger code, id response, NSString *message) {
             dispatch_group_leave(group);
@@ -72,7 +72,7 @@
         
         dispatch_semaphore_t semapore = dispatch_semaphore_create(0);
         
-        [[LNHttpManager shareManage] get:@"v2/book/1220562" parameter:nil progress:nil success:^(NSInteger code, id response, NSString *message) {
+        [[LNHttpManager shareManager] get:@"v2/book/1220562" parameter:nil progress:nil success:^(NSInteger code, id response, NSString *message) {
             dispatch_semaphore_signal(semapore);
         } failure:^(NSInteger code, id response, NSString *message) {
             dispatch_semaphore_signal(semapore);
@@ -87,7 +87,7 @@
         
         dispatch_semaphore_t semapore = dispatch_semaphore_create(0);
         
-        [[LNHttpManager shareManage] get:@"v2/book/1220561" parameter:nil progress:nil success:^(NSInteger code, id response, NSString *message) {
+        [[LNHttpManager shareManager] get:@"v2/book/1220561" parameter:nil progress:nil success:^(NSInteger code, id response, NSString *message) {
             dispatch_semaphore_signal(semapore);
         } failure:^(NSInteger code, id response, NSString *message) {
             dispatch_semaphore_signal(semapore);

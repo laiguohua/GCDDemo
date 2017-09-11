@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142BEB461F6696E8002B5D82 /* LNDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 142BEB451F6696E8002B5D82 /* LNDataBaseManager.m */; };
 		14514FC41F66718D00440A2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14514FC31F66718D00440A2B /* AppDelegate.m */; };
 		14514FC71F6671AB00440A2B /* LNStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14514FC61F6671AA00440A2B /* LNStartViewController.m */; };
 		14514FDA1F66805A00440A2B /* LNBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14514FD51F66805A00440A2B /* LNBaseViewController.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		142BEB441F6696E8002B5D82 /* LNDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNDataBaseManager.h; sourceTree = "<group>"; };
+		142BEB451F6696E8002B5D82 /* LNDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNDataBaseManager.m; sourceTree = "<group>"; };
 		14514FC21F66718D00440A2B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14514FC31F66718D00440A2B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		14514FC51F6671AA00440A2B /* LNStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNStartViewController.h; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 		145150121F66966900440A2B /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				142BEB441F6696E8002B5D82 /* LNDataBaseManager.h */,
+				142BEB451F6696E8002B5D82 /* LNDataBaseManager.m */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 				14514FC71F6671AB00440A2B /* LNStartViewController.m in Sources */,
 				14514FE71F6680F200440A2B /* LNHttpManager.m in Sources */,
 				14514FDA1F66805A00440A2B /* LNBaseViewController.m in Sources */,
+				142BEB461F6696E8002B5D82 /* LNDataBaseManager.m in Sources */,
 				14514FE81F6680F200440A2B /* LNMBProgressHUD.m in Sources */,
 				14E372681F2DD88300523A13 /* main.m in Sources */,
 				14E372741F2DD88300523A13 /* GCDDemo.xcdatamodeld in Sources */,

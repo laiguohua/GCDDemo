@@ -23,7 +23,7 @@ typedef void(^netProgressBlock)(NSProgress *uploadProgress);
 
 @interface LNHttpManager : AFHTTPSessionManager
 
-+ (LNHttpManager *)shareManage;
++ (LNHttpManager *)shareManager;
 
 - (NSURLSessionTask *)post:(NSString *)interfacstring parameter:(NSDictionary *)parameter progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
 
