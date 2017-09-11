@@ -11,8 +11,6 @@
 
 @interface MBManager : NSObject
 
-+ (MBManager *)shareManager;
-
 + (LNMBProgressHUD *)showHUD;
 + (LNMBProgressHUD *)showHUDMessage:(NSString *)message;
 + (LNMBProgressHUD *)showHUDWithMessage:(NSString *)message;

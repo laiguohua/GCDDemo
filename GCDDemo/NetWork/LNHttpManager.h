@@ -25,17 +25,17 @@ typedef void(^netProgressBlock)(NSProgress *uploadProgress);
 
 + (LNHttpManager *)shareManage;
 
-- (NSURLSessionTask *)post:(NSString *)interfacing parameter:(NSDictionary *)parameter progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
+- (NSURLSessionTask *)post:(NSString *)interfacstring parameter:(NSDictionary *)parameter progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
 
-- (NSURLSessionTask *)get:(NSString *)interfacing parameter:(NSDictionary *)parameter  progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
+- (NSURLSessionTask *)get:(NSString *)interfacstring parameter:(NSDictionary *)parameter  progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
 
-- (NSURLSessionTask *)postWithHud:(NSString *)interfacing parameter:(NSDictionary *)parameter progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
+- (NSURLSessionTask *)postWithHud:(NSString *)interfacstring parameter:(NSDictionary *)parameter progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
 
-- (NSURLSessionTask *)getWithHud:(NSString *)interfacing parameter:(NSDictionary *)parameter  progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
+- (NSURLSessionTask *)getWithHud:(NSString *)interfacstring parameter:(NSDictionary *)parameter  progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
 
-- (NSURLSessionTask *)post:(NSString *)interfacing parameter:(NSDictionary *)parameter hudType:(HUDTYPE)ahudType progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
+- (NSURLSessionTask *)post:(NSString *)interfacstring parameter:(NSDictionary *)parameter hudType:(HUDTYPE)ahudType progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
 
-- (NSURLSessionTask *)get:(NSString *)interfacing parameter:(NSDictionary *)parameter hudType:(HUDTYPE)ahudType progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
+- (NSURLSessionTask *)get:(NSString *)interfacstring parameter:(NSDictionary *)parameter hudType:(HUDTYPE)ahudType progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure;
 
 - (void)cancelAllTask;
 

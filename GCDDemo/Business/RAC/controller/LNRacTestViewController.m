@@ -8,6 +8,7 @@
 
 #import "LNRacTestViewController.h"
 #import "MBManager.h"
+#import "LNStartViewController.h"
 
 @interface LNRacTestViewController ()
 
@@ -76,7 +77,10 @@
     }]  subscribeNext:^(NSNumber * x) {
         self.logoinBtn.enabled = YES;
         
-        [MBManager showHUDWithMessage:[x boolValue]?@"登录成功":@"登录失败"];
+        [MBManager showHUDWithMessage:[x boolValue]?@"登录成功":@"登录失败" comple:^{
+            LNStartViewController *startVC = [LNStartViewController new];
+            [self.navigationController pushViewController:startVC animated:YES];
+        }];
     }];
     
 }

@@ -16,17 +16,6 @@ static const NSTimeInterval delayTime = 3.0;
 
 @implementation MBManager
 
-+ (MBManager *)shareManager{
-    static MBManager *manager = nil;
-    static dispatch_once_t once;
-    dispatch_once(&once, ^{
-        manager = [[MBManager alloc] init];
-    });
-    return manager;
-}
-
-
-
 + (LNMBProgressHUD *)showHUD{
     return [self showHUDMessage:nil];
 }

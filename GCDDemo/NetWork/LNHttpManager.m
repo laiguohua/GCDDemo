@@ -26,7 +26,6 @@
         manager.requestSerializer = [AFJSONRequestSerializer serializer];
         manager.responseSerializer = [AFJSONResponseSerializer serializer];
         manager.requestSerializer.timeoutInterval = 10.0;
-        
         manager.lock = [[NSLock alloc] init];
         
     });
@@ -39,25 +38,25 @@
     }
     return _signDic;
 }
-- (NSURLSessionTask *)post:(NSString *)interfacing parameter:(NSDictionary *)parameter progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
-    return [self post:interfacing parameter:parameter hudType:HUD_notShow progress:[progress copy] success:[success copy] failure:[failure copy]];
+- (NSURLSessionTask *)post:(NSString *)interfacstring parameter:(NSDictionary *)parameter progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
+    return [self post:interfacstring parameter:parameter hudType:HUD_notShow progress:[progress copy] success:[success copy] failure:[failure copy]];
 }
 
-- (NSURLSessionTask *)get:(NSString *)interfacing parameter:(NSDictionary *)parameter  progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
-    return [self get:interfacing parameter:parameter hudType:HUD_notShow progress:[progress copy] success:[success copy] failure:[failure copy]];
+- (NSURLSessionTask *)get:(NSString *)interfacstring parameter:(NSDictionary *)parameter  progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
+    return [self get:interfacstring parameter:parameter hudType:HUD_notShow progress:[progress copy] success:[success copy] failure:[failure copy]];
 }
 
-- (NSURLSessionTask *)postWithHud:(NSString *)interfacing parameter:(NSDictionary *)parameter progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
-    return [self post:interfacing parameter:parameter hudType:HUD_showAndCompleHidden progress:[progress copy] success:[success copy] failure:[failure copy]];
+- (NSURLSessionTask *)postWithHud:(NSString *)interfacstring parameter:(NSDictionary *)parameter progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
+    return [self post:interfacstring parameter:parameter hudType:HUD_showAndCompleHidden progress:[progress copy] success:[success copy] failure:[failure copy]];
 }
 
-- (NSURLSessionTask *)getWithHud:(NSString *)interfacing parameter:(NSDictionary *)parameter  progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
-    return [self get:interfacing parameter:parameter hudType:HUD_showAndCompleHidden progress:[progress copy] success:[success copy] failure:[failure copy]];
+- (NSURLSessionTask *)getWithHud:(NSString *)interfacstring parameter:(NSDictionary *)parameter  progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
+    return [self get:interfacstring parameter:parameter hudType:HUD_showAndCompleHidden progress:[progress copy] success:[success copy] failure:[failure copy]];
 }
 
-- (NSURLSessionTask *)post:(NSString *)interfacing parameter:(NSDictionary *)parameter hudType:(HUDTYPE)ahudType progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
+- (NSURLSessionTask *)post:(NSString *)interfacstring parameter:(NSDictionary *)parameter hudType:(HUDTYPE)ahudType progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
     
-    NSURLSessionTask *atask = [self POST:interfacing parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+    NSURLSessionTask *atask = [self POST:interfacstring parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
         if(progress){
             progress(uploadProgress);
         }
@@ -81,9 +80,9 @@
     return atask;
 }
 
-- (NSURLSessionTask *)get:(NSString *)interfacing parameter:(NSDictionary *)parameter hudType:(HUDTYPE)ahudType progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
+- (NSURLSessionTask *)get:(NSString *)interfacstring parameter:(NSDictionary *)parameter hudType:(HUDTYPE)ahudType progress:(netProgressBlock)progress success:(netSuccessBlock)success failure:(netFailureBlock)failure{
     
-    NSURLSessionTask *atask = [self GET:interfacing parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+    NSURLSessionTask *atask = [self GET:interfacstring parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
         if(progress){
             progress(uploadProgress);
         }

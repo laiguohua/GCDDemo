@@ -7,7 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "LNRacTestViewController.h"
+#import "LNGCDTestViewController.h"
+#import "LNNetLoadViewController.h"
+#import "LNNavigationController.h"
+#import "LNTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,18 +24,26 @@
     // Override point for customization after application launch.
     CGRect rect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, rect.size.width, rect.size.height)];
-   
-    ViewController *vc = [ViewController new];
-    vc.tabBarItem.title = @"1";
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    UIViewController *vc1 = [UIViewController new];
-    vc1.tabBarItem.title = @"2";
-    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:vc1];
-    UITabBarController *tab = [[UITabBarController alloc] init];
-    tab.viewControllers = @[nav,nav1];
-    tab.tabBar.tintColor = [UIColor redColor];
-    self.window.rootViewController = tab;
-//    self.window.rootViewController = nav;
+    
+    LNNetLoadViewController *netVC = [LNNetLoadViewController new];
+    LNGCDTestViewController *gcdVC = [LNGCDTestViewController new];
+    LNRacTestViewController *racVC = [LNRacTestViewController new];
+    LNNavigationController *netNav = [[LNNavigationController alloc] initWithRootViewController:netVC];
+    LNNavigationController *gcdNav = [[LNNavigationController alloc] initWithRootViewController:gcdVC];
+    LNNavigationController *racNav = [[LNNavigationController alloc] initWithRootViewController:racVC];
+    netNav.tabBarItem.title = @"NETWORK";
+    gcdNav.tabBarItem.title = @"GCD";
+    racNav.tabBarItem.title = @"RAC";
+    LNTabBarViewController *tabVC = [LNTabBarViewController new];
+    tabVC.viewControllers = @[netNav,gcdNav,racNav];
+    //设置标签栏文字和图片的颜色
+    tabVC.tabBar.tintColor = [UIColor whiteColor];
+    //设置标签栏的颜色
+    tabVC.tabBar.barTintColor = [UIColor blackColor];
+    //设置标签栏风格(默认高度49)
+    tabVC.tabBar.barStyle = UIBarStyleBlack;
+
+    self.window.rootViewController = tabVC;
     [self.window makeKeyAndVisible];
     return YES;
 }
