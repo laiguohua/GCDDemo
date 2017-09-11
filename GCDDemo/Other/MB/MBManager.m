@@ -162,6 +162,8 @@ static const NSTimeInterval delayTime = 3.0;
         UITabBarController *tab = (UITabBarController *)vc;
         UIViewController *avc = tab.selectedViewController;
         return [self getCurrentControllerWithController:avc];
+    }else if(vc.presentedViewController){
+        return [self getCurrentControllerWithController:vc.presentedViewController];
     }
     return vc;
 }
