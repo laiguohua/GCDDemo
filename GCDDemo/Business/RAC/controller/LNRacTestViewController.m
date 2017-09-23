@@ -102,6 +102,12 @@
         make.height.equalTo(@44);
         make.width.equalTo(@80);
     }];
+    RACSignal *textFs = self.testTextField.rac_textSignal;
+    RACSignal *reduce = [RACSignal combineLatest:@[textFs] reduce:^(NSString *signal1_Str){
+        return @(signal1_Str.length > 4);
+    }];
+    
+    RAC(self.logoinBtn,enabled) = reduce;
     
     
     [self.testTextField.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
