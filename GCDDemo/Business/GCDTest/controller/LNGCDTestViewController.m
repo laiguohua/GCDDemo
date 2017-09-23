@@ -52,11 +52,13 @@
     switch (sender.tag) {
         case 300:
         {
+            //线程同步
             [self.agcdHander groupControl];
         }
             break;
         case 301:
         {
+            //用信号量来达到线程同步
             [self.agcdHander groupControlBySemaphore];
         }
             break;
