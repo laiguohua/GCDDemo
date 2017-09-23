@@ -23,6 +23,9 @@
 		1451500C1F66855500440A2B /* LNNetLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14514FFD1F66855500440A2B /* LNNetLoadViewController.m */; };
 		1451500D1F66855500440A2B /* LNRacTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 145150031F66855500440A2B /* LNRacTestViewController.m */; };
 		145150111F66860100440A2B /* LNTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 145150101F66860100440A2B /* LNTabBarViewController.m */; };
+		14CEFD471F72C58D00778789 /* LNRacTestTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CEFD461F72C58D00778789 /* LNRacTestTwoViewController.m */; };
+		14CEFD4A1F72C5B300778789 /* LNRacTestTwoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CEFD491F72C5B300778789 /* LNRacTestTwoModel.m */; };
+		14CEFD4D1F72CD0B00778789 /* LNDelegateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CEFD4C1F72CD0B00778789 /* LNDelegateModel.m */; };
 		14E372681F2DD88300523A13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E372671F2DD88300523A13 /* main.m */; };
 		14E372711F2DD88300523A13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E3726F1F2DD88300523A13 /* Main.storyboard */; };
 		14E372741F2DD88300523A13 /* GCDDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14E372721F2DD88300523A13 /* GCDDemo.xcdatamodeld */; };
@@ -75,6 +78,12 @@
 		145150031F66855500440A2B /* LNRacTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNRacTestViewController.m; sourceTree = "<group>"; };
 		1451500F1F66860100440A2B /* LNTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNTabBarViewController.h; sourceTree = "<group>"; };
 		145150101F66860100440A2B /* LNTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNTabBarViewController.m; sourceTree = "<group>"; };
+		14CEFD451F72C58D00778789 /* LNRacTestTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNRacTestTwoViewController.h; sourceTree = "<group>"; };
+		14CEFD461F72C58D00778789 /* LNRacTestTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNRacTestTwoViewController.m; sourceTree = "<group>"; };
+		14CEFD481F72C5B300778789 /* LNRacTestTwoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNRacTestTwoModel.h; sourceTree = "<group>"; };
+		14CEFD491F72C5B300778789 /* LNRacTestTwoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNRacTestTwoModel.m; sourceTree = "<group>"; };
+		14CEFD4B1F72CD0B00778789 /* LNDelegateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNDelegateModel.h; sourceTree = "<group>"; };
+		14CEFD4C1F72CD0B00778789 /* LNDelegateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNDelegateModel.m; sourceTree = "<group>"; };
 		14E372631F2DD88300523A13 /* GCDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E372671F2DD88300523A13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14E372701F2DD88300523A13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -287,6 +296,8 @@
 			children = (
 				145150021F66855500440A2B /* LNRacTestViewController.h */,
 				145150031F66855500440A2B /* LNRacTestViewController.m */,
+				14CEFD451F72C58D00778789 /* LNRacTestTwoViewController.h */,
+				14CEFD461F72C58D00778789 /* LNRacTestTwoViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -308,6 +319,10 @@
 		145150061F66855500440A2B /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				14CEFD481F72C5B300778789 /* LNRacTestTwoModel.h */,
+				14CEFD491F72C5B300778789 /* LNRacTestTwoModel.m */,
+				14CEFD4B1F72CD0B00778789 /* LNDelegateModel.h */,
+				14CEFD4C1F72CD0B00778789 /* LNDelegateModel.m */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -570,9 +585,11 @@
 				14514FDB1F66805A00440A2B /* LNNavigationController.m in Sources */,
 				1451500D1F66855500440A2B /* LNRacTestViewController.m in Sources */,
 				145150091F66855500440A2B /* GCDHander.m in Sources */,
+				14CEFD4A1F72C5B300778789 /* LNRacTestTwoModel.m in Sources */,
 				14514FC71F6671AB00440A2B /* LNStartViewController.m in Sources */,
 				14514FE71F6680F200440A2B /* LNHttpManager.m in Sources */,
 				14514FDA1F66805A00440A2B /* LNBaseViewController.m in Sources */,
+				14CEFD471F72C58D00778789 /* LNRacTestTwoViewController.m in Sources */,
 				142BEB461F6696E8002B5D82 /* LNDataBaseManager.m in Sources */,
 				14514FE81F6680F200440A2B /* LNMBProgressHUD.m in Sources */,
 				14E372681F2DD88300523A13 /* main.m in Sources */,
@@ -580,6 +597,7 @@
 				145150081F66855500440A2B /* CFunctionHander.m in Sources */,
 				145150111F66860100440A2B /* LNTabBarViewController.m in Sources */,
 				14514FC41F66718D00440A2B /* AppDelegate.m in Sources */,
+				14CEFD4D1F72CD0B00778789 /* LNDelegateModel.m in Sources */,
 				145150071F66855500440A2B /* LNGCDTestViewController.m in Sources */,
 				1451500A1F66855500440A2B /* OperationHander.m in Sources */,
 				1451500B1F66855500440A2B /* RunLoopHander.m in Sources */,

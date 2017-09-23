@@ -9,6 +9,7 @@
 #import "LNRacTestViewController.h"
 #import "MBManager.h"
 #import "LNStartViewController.h"
+#import "LNRacTestTwoViewController.h"
 
 @interface LNRacTestViewController ()
 
@@ -32,6 +33,59 @@
 
 - (void)racLoginTest{
     
+    //布局测试
+//    UIScrollView *scrollview = [UIScrollView new];
+//    scrollview.backgroundColor = [UIColor orangeColor];
+//    UIView *aview = [UIView new];
+//    aview.backgroundColor = [UIColor redColor];
+//    
+//    UIView *bgview = [UIView new];
+//    bgview.backgroundColor = [UIColor cyanColor];
+//    
+//    UIButton *btn = [UIButton new];
+//    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    [btn setTitle:@"clik" forState:UIControlStateNormal];
+//    btn.backgroundColor = [UIColor redColor];
+//    
+//    [bgview addSubview:aview];
+//    [scrollview addSubview:bgview];
+//    [bgview addSubview:btn];
+//    
+//    [self.view addSubview:scrollview];
+//    
+//    [aview mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(bgview.mas_top);
+//        make.left.equalTo(bgview.mas_left);
+//        make.right.equalTo(bgview.mas_right);
+//        make.height.equalTo(@150);
+//        make.width.equalTo(bgview.mas_width);
+//    }];
+//    
+//
+//    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.greaterThanOrEqualTo(aview.mas_bottom).offset(20);
+//        make.left.equalTo(bgview.mas_left).offset(24);
+//        make.right.equalTo(bgview.mas_right).offset(-24);
+//        make.bottom.equalTo(bgview.mas_bottom).priorityHigh();
+//        make.height.equalTo(@40);
+//    }];
+//    
+//    CGFloat height = [UIScreen mainScreen].bounds.size.height - 64 - 49;
+//    [bgview mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(scrollview);
+//        make.width.equalTo(scrollview);
+//        make.height.greaterThanOrEqualTo(@(height)).priorityHigh();
+//    }];
+//    
+//    [scrollview mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view);
+//
+//    }];
+//    
+//    
+//    return;
+    
+    
     [self.view addSubview:self.testTextField];
     [self.view addSubview:self.logoinBtn];
     [_testTextField makeConstraints:^(MASConstraintMaker *make) {
@@ -48,6 +102,7 @@
         make.height.equalTo(@44);
         make.width.equalTo(@80);
     }];
+    
     
     [self.testTextField.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
         NSLog(@"输出%@",x);
@@ -78,10 +133,19 @@
         self.logoinBtn.enabled = YES;
         
         [MBManager showHUDWithMessage:[x boolValue]?@"登录成功":@"登录失败" comple:^{
-            LNStartViewController *startVC = [LNStartViewController new];
-            [self.navigationController pushViewController:startVC animated:YES];
+//            LNStartViewController *startVC = [LNStartViewController new];
+//            [self.navigationController pushViewController:startVC animated:YES];
+            LNRacTestTwoViewController *racvc = [LNRacTestTwoViewController new];
+            [self.navigationController pushViewController:racvc animated:YES];
         }];
     }];
+    
+    
+    NSArray *arr = @[@"1",@"2",@"3",@"4"];
+    [arr.rac_sequence.signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
     
 }
 
