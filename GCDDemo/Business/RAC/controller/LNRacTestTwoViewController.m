@@ -35,6 +35,7 @@
     
     @weakify(self);
     
+    //信号中的信号
     [self.viewModel.requestCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@",x);
         @strongify(self);
