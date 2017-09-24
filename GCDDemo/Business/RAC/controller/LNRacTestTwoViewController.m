@@ -63,6 +63,10 @@
     
 }
 
+- (void)methodTest{
+    
+}
+
 - (void)loadUI{
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
