@@ -64,7 +64,7 @@
 }
 
 - (void)methodTest2{
-    
+    NSLog(@"this is method 2");
 }
 
 - (void)methodTest{
