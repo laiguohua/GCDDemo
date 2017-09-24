@@ -31,6 +31,7 @@
     
     [self loadUI];
     
+    //tableview 的代理
     self.delegaModel.viewModel = self.viewModel;
     
     @weakify(self);
