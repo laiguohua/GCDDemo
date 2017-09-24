@@ -62,7 +62,7 @@
 //    }];
     
     [self.delegaModel.selectSubject subscribeNext:^(id  _Nullable x) {
-        NSLog(@"select row is %@",x);
+        NSLog(@"RAC select row is %@",x);
     }];
     
 }
