@@ -33,6 +33,8 @@
     
     self.delegaModel.viewModel = self.viewModel;
     
+    //测试一个冲突
+    
     @weakify(self);
     
     //信号中的信号
