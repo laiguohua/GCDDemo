@@ -62,7 +62,7 @@
 //    }];
     
     [self.delegaModel.selectSubject subscribeNext:^(id  _Nullable x) {
-        NSLog(@"select row is %@",x);
+        NSLog(@"GCD select row is %@",x);
     }];
     
 }
