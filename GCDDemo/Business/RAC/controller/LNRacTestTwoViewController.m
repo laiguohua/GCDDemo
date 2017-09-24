@@ -46,6 +46,12 @@
     }];
     [self.viewModel.requestCommand execute:nil];
     
+    RACSubject *subject = [RACSubject subject];
+    [subject.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [subject sendNext:@"1111"];
     
 //    [[self.viewModel.requestCommand execute:nil] subscribeNext:^(id  _Nullable x) {
 //        
@@ -64,7 +70,7 @@
 }
 
 - (void)methodTest2{
-    
+    NSLog(@"this is method 2");
 }
 
 - (void)methodTest{
