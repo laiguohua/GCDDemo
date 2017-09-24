@@ -46,6 +46,8 @@
     [self.viewModel.requestCommand execute:nil];
     
     
+    //测试一个冲突
+    
     
 //    [[self.viewModel.requestCommand execute:nil] subscribeNext:^(id  _Nullable x) {
 //        
