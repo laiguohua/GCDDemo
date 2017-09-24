@@ -33,8 +33,6 @@
     
     self.delegaModel.viewModel = self.viewModel;
     
-    //测试一个冲突
-    
     @weakify(self);
     
     //信号中的信号
@@ -46,9 +44,6 @@
         
     }];
     [self.viewModel.requestCommand execute:nil];
-    
-    
-    //测试一个冲突
     
     
 //    [[self.viewModel.requestCommand execute:nil] subscribeNext:^(id  _Nullable x) {
