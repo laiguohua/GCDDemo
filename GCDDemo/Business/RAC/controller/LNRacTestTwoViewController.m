@@ -17,6 +17,8 @@
 
 @property (nonatomic,strong)UITableView *tableView;
 
+//@property (nonatomic,strong)RACCommand *command;
+
 @end
 
 @implementation LNRacTestTwoViewController
@@ -46,12 +48,36 @@
     }];
     [self.viewModel.requestCommand execute:nil];
     
-    RACSubject *subject = [RACSubject subject];
-    [subject.switchToLatest subscribeNext:^(id  _Nullable x) {
+     RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+      return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+          [subscriber sendNext:@"77777"];
+          [subscriber sendCompleted];
+          return nil;
+      }];
+    }];
+    //可以过滤掉多个请求，只请求一次
+    [command.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@",x);
     }];
+    [command execute:nil];
+    [command execute:nil];
     
-    [subject sendNext:@"1111"];
+    RACSubject *subject = [RACSubject subject];
+    [[subject takeLast:1] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    [subject sendNext:@"3333"];
+    [subject sendNext:@"55555"];
+    [subject sendNext:@"8888"];
+    [subject sendCompleted];//订阅者必须调用完成
+    
+    RACSubject *subject1 = [RACSubject subject];
+    [[subject1 throttle:.5] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    [subject1 sendNext:@"3333"];
+    [subject1 sendNext:@"55555"];
+    [subject1 sendNext:@"8888"];
     
 //    [[self.viewModel.requestCommand execute:nil] subscribeNext:^(id  _Nullable x) {
 //        

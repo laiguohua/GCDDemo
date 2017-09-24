@@ -129,13 +129,13 @@
     
     
     @weakify(self)
-    [[[[self.logoinBtn rac_signalForControlEvents:UIControlEventTouchUpInside] doNext:^(__kindof UIControl * _Nullable x) {
+    [[[[[self.logoinBtn rac_signalForControlEvents:UIControlEventTouchUpInside] doNext:^(__kindof UIControl * _Nullable x) {
         @strongify(self)
         self.logoinBtn.enabled = NO;
     }] flattenMap:^id _Nullable(__kindof UIControl * _Nullable value) {
         @strongify(self)
         return [self aloginSignal];
-    }]  subscribeNext:^(NSNumber * x) {
+    }] throttle:.5] subscribeNext:^(NSNumber * x) {
         self.logoinBtn.enabled = YES;
         
         [MBManager showHUDWithMessage:[x boolValue]?@"登录成功":@"登录失败" comple:^{
