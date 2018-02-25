@@ -9,6 +9,12 @@
 #import "LNNetLoadViewController.h"
 #import "MBManager.h"
 #import "LNHttpManager.h"
+#import "UINavigationController+DirectPop.h"
+
+@implementation testModel
+
+
+@end
 
 @interface LNNetLoadViewController ()
 
@@ -42,6 +48,13 @@
     switch (sender.tag) {
         case 200:
         {
+            [self searchTest];
+            return;
+            //测试
+            [self.navigationController directTopControllerPop];
+            
+            return;
+            
             [self startNetWork];
         }
             break;
@@ -59,6 +72,20 @@
         default:
             break;
     }
+}
+
+- (void)searchTest{
+    NSMutableArray *muArr = [NSMutableArray array];
+    for(int i = 0;i<10;i++){
+        testModel *model = [testModel new];
+        model.myId = i+1;
+        model.name = [NSString stringWithFormat:@"name %d",i+1];
+        [muArr addObject:model];
+    }
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"myId == %ld",5];
+    NSArray *arr = [muArr filteredArrayUsingPredicate:predicate];
+    NSLog(@"%@",arr);
 }
 
 #pragma mark - method

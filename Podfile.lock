@@ -17,14 +17,18 @@ PODS:
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
+  - leveldb-library (1.18.3)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
+  - Objective-LevelDB (2.1.5):
+    - leveldb-library (~> 1.18.2)
   - ReactiveObjC (3.0.0)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
+  - TZImagePickerController (1.8.7)
   - WebViewJavascriptBridge (6.0.2)
 
 DEPENDENCIES:
@@ -34,21 +38,26 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
   - MJExtension (~> 3.0.13)
   - MJRefresh (~> 3.1.12)
+  - Objective-LevelDB
   - ReactiveObjC
   - SDWebImage (~> 4.1.0)
+  - TZImagePickerController (~> 1.8.7)
   - WebViewJavascriptBridge (~> 6.0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  Objective-LevelDB: fa075efd9d0be645aee51847cc3ee70cdadb80ce
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  TZImagePickerController: 79fa5712237cf6bdc63311cf65d7e0aa369b2b0a
   WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
 
-PODFILE CHECKSUM: 68857229d6c563d8911d94816d463a088e8ba691
+PODFILE CHECKSUM: 8303f07611208308348605e58228332b04120187
 
 COCOAPODS: 1.2.1
