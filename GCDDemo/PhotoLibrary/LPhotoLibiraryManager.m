@@ -7,6 +7,7 @@
 //
 
 #import "LPhotoLibiraryManager.h"
+#import "LKAuthorizationModel.h"
 
 @implementation LNPhotoList
 
@@ -63,6 +64,10 @@
     return result;
 }
 -(NSArray<LNPhotoList *> *)getAllPhotoList{
+    
+    if(![LKAuthorizationModel photoAlbumAuthorizationShowUnabelMessage:YES]){
+        return nil;
+    }
     
     NSMutableArray<LNPhotoList *> * photoList = [NSMutableArray array];
     /**

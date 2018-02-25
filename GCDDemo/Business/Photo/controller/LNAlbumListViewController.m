@@ -61,6 +61,7 @@
 - (UITableView *)tableView{
     if(!_tableView){
         _tableView = [LAlbumListDelegateModel createTableWithStyle:UITableViewStylePlain rigistNibCellNames:@[NSStringFromClass(LAlubumListCell.class)] rigistClassCellNames:nil];
+        _tableView.tableFooterView = [UIView new];
     }
     return _tableView;
 }

@@ -54,6 +54,7 @@
 		14EEDEBF1F962F5300BE3DB5 /* LNPhotoPreviewBigCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EEDEBD1F962F5300BE3DB5 /* LNPhotoPreviewBigCell.xib */; };
 		14EEDEC21F96382000BE3DB5 /* LNPhotoPreviewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EEDEC11F96382000BE3DB5 /* LNPhotoPreviewModel.m */; };
 		4F64AD47C657A2B4AFD63C10 /* Pods_GCDDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B6BE281BEE6213D94100F /* Pods_GCDDemo.framework */; };
+		D7E8F2FD204287EE003A2503 /* LKAuthorizationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E8F2FC204287EE003A2503 /* LKAuthorizationModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,8 @@
 		495B6BE281BEE6213D94100F /* Pods_GCDDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCDDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE4ECFC6EADCE4C87536C0C /* Pods-GCDDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCDDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCDDemo/Pods-GCDDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C24737FB9D93121B7446DE97 /* Pods-GCDDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCDDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GCDDemo/Pods-GCDDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D7E8F2FB204287EE003A2503 /* LKAuthorizationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKAuthorizationModel.h; sourceTree = "<group>"; };
+		D7E8F2FC204287EE003A2503 /* LKAuthorizationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAuthorizationModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +249,7 @@
 		14514FE11F6680F200440A2B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				D7E8F2FA204287EE003A2503 /* Tool */,
 				14514FE21F6680F200440A2B /* MB */,
 			);
 			path = Other;
@@ -559,6 +563,15 @@
 			path = HeaderFile;
 			sourceTree = "<group>";
 		};
+		D7E8F2FA204287EE003A2503 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D7E8F2FB204287EE003A2503 /* LKAuthorizationModel.h */,
+				D7E8F2FC204287EE003A2503 /* LKAuthorizationModel.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		FAE0AAC718D5F83C74A5325D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +756,7 @@
 				14E293F41F935EB900F72914 /* LAlbumListModel.m in Sources */,
 				145150091F66855500440A2B /* GCDHander.m in Sources */,
 				14CEFD4A1F72C5B300778789 /* LNRacTestTwoModel.m in Sources */,
+				D7E8F2FD204287EE003A2503 /* LKAuthorizationModel.m in Sources */,
 				146752A21F933066009D4DB2 /* LPhotoLibiraryManager.m in Sources */,
 				14514FC71F6671AB00440A2B /* LNStartViewController.m in Sources */,
 				14514FE71F6680F200440A2B /* LNHttpManager.m in Sources */,
