@@ -8,6 +8,7 @@
 
 #import "LNDelegateModel.h"
 
+
 @implementation LNDelegateModel
 
 #pragma mark - 代理
@@ -23,13 +24,24 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndetifi];
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndetifi];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        UIView *line = [UIView new];
+        line.backgroundColor = [UIColor redColor];
+        line.tag = 100;
+        [cell.contentView addSubview:line];
+        [line mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(cell.contentView.mas_top);
+            make.right.equalTo(cell.contentView.mas_right).offset(-15);
+            make.bottom.equalTo(cell.contentView.mas_bottom);
+            make.width.equalTo(@1);
+        }];
     }
     cell.textLabel.text = self.viewModel.dataArr[indexPath.row];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50;
+    return 100;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

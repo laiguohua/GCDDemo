@@ -13,5 +13,6 @@
 
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "Masonry.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #endif /* GCDDemoHeader_h */

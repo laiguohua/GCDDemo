@@ -10,6 +10,10 @@
 #import "MBManager.h"
 #import "LNStartViewController.h"
 #import "LNRacTestTwoViewController.h"
+#import "UINavigationController+DirectPop.h"
+
+#import "LNAlbumListViewController.h"
+#import "LNPhotoSmartViewController.h"
 
 @interface LNRacTestViewController ()
 
@@ -84,7 +88,24 @@
 //    
 //    
 //    return;
+    @weakify(self);
+    UIButton *button = [UIButton new];
+    button.backgroundColor = [UIColor redColor];
+    [button setTitle:@"photo" forState:UIControlStateNormal];
+    [[[button rac_signalForControlEvents:UIControlEventTouchUpInside] throttle:.2] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
+        LNAlbumListViewController *vc = [LNAlbumListViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     
+    [self.view addSubview:button];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.top).offset(70);
+        make.height.equalTo(@40);
+        make.width.equalTo(@80);
+        make.centerX.equalTo(self.view.mas_centerX);
+
+    }];
     
     [self.view addSubview:self.testTextField];
     [self.view addSubview:self.logoinBtn];
@@ -128,7 +149,7 @@
     }];
     
     
-    @weakify(self)
+//    @weakify(self)
     [[[[[self.logoinBtn rac_signalForControlEvents:UIControlEventTouchUpInside] doNext:^(__kindof UIControl * _Nullable x) {
         @strongify(self)
         self.logoinBtn.enabled = NO;
@@ -142,6 +163,7 @@
 //            LNStartViewController *startVC = [LNStartViewController new];
 //            [self.navigationController pushViewController:startVC animated:YES];
             LNRacTestTwoViewController *racvc = [LNRacTestTwoViewController new];
+            [self.navigationController saveDirectViewControllerName:NSStringFromClass(self.class)];
             [self.navigationController pushViewController:racvc animated:YES];
         }];
     }];
