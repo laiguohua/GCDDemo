@@ -8,6 +8,12 @@
 
 #import "LNBaseViewController.h"
 
+@interface testModel : NSObject
+@property (nonatomic,assign)NSInteger myId;
+@property (nonatomic,copy)NSString *name;
+
+@end
+
 @interface LNNetLoadViewController : LNBaseViewController
 
 @end

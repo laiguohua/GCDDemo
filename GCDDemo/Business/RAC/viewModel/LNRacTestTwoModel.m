@@ -26,6 +26,7 @@
                 @strongify(self);
                 [self loadData];
                 [subscriber sendNext:nil];
+                [subscriber sendCompleted];
                 return nil;
             }];
         }];
